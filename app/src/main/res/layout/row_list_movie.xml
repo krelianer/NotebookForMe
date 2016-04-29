@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:background="?android:attr/selectableItemBackground" >
+
+        <com.loopj.android.image.SmartImageView
+            android:layout_width="120dp"
+            android:layout_height="160dp"
+            android:id="@+id/posterImageView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="10dp"
+            android:src="#c84848"
+            android:contentDescription="Poster" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/titleTextView"
+            android:textStyle="bold"
+            android:layout_alignTop="@+id/posterImageView"
+            android:layout_toRightOf="@+id/posterImageView"
+            android:layout_toEndOf="@+id/posterImageView" />
+
+        <RatingBar
+            style = "?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            android:rating="4.5"
+            android:numStars="10"
+            android:layout_alignTop="@+id/ratingTextView"
+            android:layout_toRightOf="@+id/ratingTextView"
+            android:layout_toEndOf="@+id/ratingTextView"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingTextView"
+            android:textStyle="bold"
+            android:layout_below="@+id/releasetextView"
+            android:layout_toRightOf="@+id/posterImageView"
+            android:layout_toEndOf="@+id/posterImageView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/releasetextView"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:layout_alignTop="@+id/imageView2"
+            android:layout_toRightOf="@+id/imageView2"
+            android:layout_toEndOf="@+id/imageView2"
+            android:layout_alignBottom="@+id/imageView2" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/imageView2"
+            android:contentDescription="Calendar"
+            android:src="@mipmap/calendar"
+            android:layout_below="@+id/titleTextView"
+            android:layout_toRightOf="@+id/posterImageView"
+            android:layout_toEndOf="@+id/posterImageView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/overviewTextView"
+            android:layout_below="@+id/ratingTextView"
+            android:layout_alignLeft="@+id/ratingTextView"
+            android:layout_alignStart="@+id/ratingTextView"
+            android:layout_alignRight="@+id/ratingBar"
+            android:layout_alignEnd="@+id/ratingBar"
+            android:textSize="10sp"
+            android:layout_alignBottom="@+id/posterImageView"
+            android:maxLines="7"
+            android:ellipsize="end"
+            android:singleLine="false" />
+
+</RelativeLayout>
